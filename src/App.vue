@@ -1,20 +1,34 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+// import HelloWorld from './components/HelloWorld.vue'
+
+export default {
+  data() {
+    return {
+      message: 'La mia prima app con Vite!'
+    }
+  },
+
+  methods: {
+    saluta() {
+      console.log('ciao Vite!')
+    }
+  }
+}
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="messaggio" @click="saluta">
+    {{ message }}
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <!-- <HelloWorld msg="Vite + Vue" /> -->
 </template>
 
 <style scoped>
+
+.messaggio {
+  color: blue;
+  font-size: 50px;
+}
 .logo {
   height: 6em;
   padding: 1.5em;
